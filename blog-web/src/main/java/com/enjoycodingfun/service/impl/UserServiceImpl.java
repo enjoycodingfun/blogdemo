@@ -12,11 +12,37 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
+
     public int regist(User user) {
         return userMapper.insert(user);
     }
 
-    public User login(String name, String password) {
+    @Override
+    public User login(String email, String password) {
+        return null;
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return null;
+    }
+
+    @Override
+    public User findByPhone(String phone) {
+        return null;
+    }
+
+    @Override
+    public User findById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void deleteByEmail(String email) {
+
+    }
+
+    /*public User login(String name, String password) {
         User user = new User();
         user.setEmail( name );
         user.setPassword( password );
@@ -75,7 +101,7 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setEmail( email );
         userMapper.delete( user );
-    }
+    }*/
 
     public void update(User user) {
         userMapper.updateByPrimaryKeySelective( user );
