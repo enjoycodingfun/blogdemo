@@ -72,6 +72,17 @@
     <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
   </servlet-mapping>
+  <!--验证码-->
+  <servlet>
+    <servlet-name>CaptchaServlet</servlet-name>
+    <servlet-class>
+      com.enjoycodingfun.common.CodeCaptchaServlet
+    </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CaptchaServlet</servlet-name>
+    <url-pattern>/captchaServlet</url-pattern>
+  </servlet-mapping>
 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
